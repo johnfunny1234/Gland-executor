@@ -3,6 +3,26 @@
 This repository provides a minimal graphical launcher that can be bundled into a
 self-contained Windows executable.
 
+## Downloading the project
+
+Clone the repository (replace the placeholder URL with the actual HTTPS or SSH
+address of your fork/remote):
+
+```powershell
+git clone https://example.com/your-account/Gland-executor.git
+```
+
+Then change into the project directory. On Windows PowerShell that does not
+support `&&` as a command separator, run this as a second command:
+
+```powershell
+Set-Location Gland-executor
+```
+
+> **Tip:** If you download the ZIP instead of cloning, simply extract it and
+> `cd`/`Set-Location` into the extracted `Gland-executor` folder before
+> continuing.
+
 ## Requirements
 
 Install the Python dependencies, which now include PyInstaller for packaging the
