@@ -59,13 +59,19 @@ py -3.13 main.py
 
 When the window opens you will see:
 
-* A **Start** button that kicks off a short initialization sequence instead of
-  immediately exiting with a “loaded” message.
+* A **Target executable** field that defaults to the Horizon Worlds installation
+  path (`C:\Users\Charlie\AppData\LocalLow\Meta\Horizon Worlds\Horizon.exe`).
+  Use the **Browse…** button if your copy is installed elsewhere. The Start
+  button remains disabled until a valid `Horizon.exe` is detected, so the loader
+  cannot “inject” until the dependency is present.
+* A **Start** button that kicks off a short initialization sequence once the exe
+  check passes, rather than immediately exiting with a “loaded” message.
 * A status indicator, progress bar, and scrolling log so you can confirm each
   loader step completes successfully.
 
-Click **Start** and watch the steps progress until the status reads “Loader
-ready – click Close to exit.”
+After the path resolves successfully, click **Start**. The log will display the
+selected executable and advance through the steps until the status reads
+“Loader ready – click Close to exit.”
 
 ## Building a standalone executable
 
