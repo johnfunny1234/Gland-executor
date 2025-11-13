@@ -57,6 +57,16 @@ py -3.13 main.py
 > `Enter` to leave the interpreter, then rerun the command from PowerShell or
 > Command Prompt.
 
+When the window opens you will see:
+
+* A **Start** button that kicks off a short initialization sequence instead of
+  immediately exiting with a “loaded” message.
+* A status indicator, progress bar, and scrolling log so you can confirm each
+  loader step completes successfully.
+
+Click **Start** and watch the steps progress until the status reads “Loader
+ready – click Close to exit.”
+
 ## Building a standalone executable
 
 The project can be packaged into a single-file executable using PyInstaller.
