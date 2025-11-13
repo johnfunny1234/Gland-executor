@@ -31,19 +31,25 @@ self-contained Windows executable.
 
 Install the Python dependencies, which now include PyInstaller for packaging the
 application. The `py -3 -m pip` form ensures Windows uses your latest Python 3
-installation:
+installation. If you specifically installed **Python 3.13**, substitute
+`py -3.13` anywhere you see `py -3` so you explicitly target that interpreter:
 
 ```powershell
 py -3 -m pip install -r requirements.txt
+# or, on Python 3.13 specifically
+py -3.13 -m pip install -r requirements.txt
 ```
 
 ## Running the application
 
 To run the GUI directly with Python, execute the launcher script from the
-repository root (again using `py -3` on Windows):
+repository root (again using `py -3`—or `py -3.13` if that is the version you
+installed—on Windows):
 
 ```powershell
 py -3 main.py
+# or explicitly
+py -3.13 main.py
 ```
 
 > **Troubleshooting tip:** If you still see `SyntaxError: invalid syntax`, you
@@ -54,10 +60,12 @@ py -3 main.py
 ## Building a standalone executable
 
 The project can be packaged into a single-file executable using PyInstaller.
-From the repository root, run:
+From the repository root, run (swapping in `py -3.13` if needed):
 
 ```powershell
 py -3 -m PyInstaller --noconfirm --onefile --noconsole --name GlandExecutorLoader main.py
+# or explicitly
+py -3.13 -m PyInstaller --noconfirm --onefile --noconsole --name GlandExecutorLoader main.py
 ```
 
 The resulting `GlandExecutorLoader.exe` will be available in the `dist/`
